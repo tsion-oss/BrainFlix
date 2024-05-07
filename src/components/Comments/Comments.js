@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import commentIcon from "/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Icons/add_comment.svg"
+import commentIcon from "/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/Icons/add_comment.svg"
 import './Comments.scss'
-import avatar from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Images/Mohan-muruge.jpg'
+import avatar from '/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/Images/Mohan-muruge.jpg'
 
 const Comments = ({ commentsList, formatDate }) => {
    const [comments, setComments] = useState(commentsList)
