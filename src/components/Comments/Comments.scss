@@ -142,6 +142,11 @@
         padding-right: 0rem;
         &__lists{
             padding-right: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            &:last-child{
+                border-bottom: none;
+            }
         }
         &__input{
             width: 32vw;
@@ -153,5 +158,10 @@
             position: relative;
             right: 5rem;
         }
+        &__form-div{
+            padding-bottom: 0.5rem;
+        }
+       
+        
     }
 }
