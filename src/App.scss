@@ -1,0 +1,25 @@
+@import './styles/partials/mixins';
+@import './styles/partials/typograhpy';
+@import './styles/partials/variables';
+
+*{
+    font-family: 'Avenir Next Regular';
+    box-sizing: border-box;
+}
+body{
+  
+    margin: 0;
+    padding: 0;
+}
+.desktop{
+    @include desktop{
+        display: flex;
+        padding: 0rem 7rem;
+        &__2{
+            width: 67%;
+        }
+        &__3{
+            border-left: 1px solid $secondary-mercury;
+        }
+    }
+}

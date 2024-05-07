@@ -1,0 +1,98 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/typograhpy';
+@import '../../styles/partials/variables';
+.nav{
+    width: 100%;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    &--tablet{
+        display: none;
+    }
+    &__logo{
+        width: 8rem;
+    }
+    &__input-div{
+       position: relative;
+       display: flex;
+       align-items: center;
+       width: 100%;
+    }
+    &__input{
+        width: 100%;
+        padding-right: 1.2rem;
+        height: 2.5rem;
+        border: 1.5px solid rgba(128, 128, 128, 0.207);
+        border-radius: 0.2rem;
+        padding-left: 2rem;
+        &::placeholder{
+            font-size: 1rem;
+        }
+    }
+    &__search-icon{
+        position: absolute;
+        top: 50%;
+        left: 0.7rem;
+        transform: translateY(-50%);
+        width: 1rem;
+    }
+    &__avatar{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+    &__input-avatar{
+       display: flex;
+       width: 100%;
+       gap: 1rem;
+    } 
+    &__button{
+        height: 2.6rem;
+        background-color: $primary-blue;
+        width: 100%;
+        border: none;
+        border-radius: 0.2rem;
+        color: $primary-white;
+        font-size: 0.9rem;
+    }
+    &__button-div{
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+    &__button-icon{
+        position: absolute;
+        top: 50%;
+        left: 0.5rem; 
+        transform: translateY(-50%);
+    }
+    @include tablet {
+        &--tablet{
+          display: block;
+          display: flex;
+          flex-direction: row;
+          padding: 1rem 2.5rem;
+          justify-content: space-between;
+          width: 100%;
+        }
+        &__input-avatar--tab{
+            width: 30rem;
+        }
+        &__input--tab{
+            width: 16rem;
+        }
+        &__button--tab{
+            width: 10rem;
+        }
+        &--mobi{
+          display: none;
+        }
+    
+      }
+      @include desktop{
+        padding: 1.5rem 8.5rem;
+      }
+}
