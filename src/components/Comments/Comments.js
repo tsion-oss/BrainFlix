@@ -9,8 +9,7 @@ const Comments = ({ commentsList, formatDate }) => {
     if(commentsList){
         setComments(commentsList)
     }
-   }, [commentsList, comments])
-  
+    }, [commentsList, comments])
     const commentsLength = comments.length
    
     return (
