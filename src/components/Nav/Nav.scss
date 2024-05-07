@@ -81,6 +81,9 @@
         &__input-avatar--tab{
             width: 30rem;
         }
+        &__logo{
+            width: 6.7rem;
+        }
         &__input--tab{
             width: 16rem;
         }
@@ -93,6 +96,6 @@
     
       }
       @include desktop{
-        padding: 1.5rem 8.5rem;
+        padding: 1rem 8.5rem;
       }
 }
