@@ -27,7 +27,6 @@ const VideoList = ({ mainVideo, updateMainVideo, videoDetail }) => {
                         </div>
                     )
                 })
-
                 }
             </div>
         </div>

@@ -1,10 +1,7 @@
-import { useState } from "react"
-import VideoDesc from "../VideoDesc/VideoDesc"
-import Comments from "../Comments/Comments";
+
 import './CurrentVideo.scss'
 
-
-const CurrentVideo = ({ mainVideo, setMainVideo, commentsList, formatDate  }) => {
+const CurrentVideo = ({ mainVideo }) => {
 
     return (
         <div className="video">

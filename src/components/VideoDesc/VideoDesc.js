@@ -3,7 +3,6 @@ import likesIcon from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/asse
 import './VideoDesc.scss'
 
 const VideoDesc = ({ mainVideo, formatDate}) => {
-  
     return (
         <div className="video-desc">
            <h1 className="video-desc__h1 video-desc__h1--tab">{mainVideo.title}</h1>
@@ -26,7 +25,6 @@ const VideoDesc = ({ mainVideo, formatDate}) => {
            <div className='video-desc__descr-div'>
               <p className='video-desc__description video-desc--descr'>{mainVideo.description}</p>
            </div>
-
         </div>
     );
 };

@@ -3,7 +3,6 @@ import Nav from './components/Nav/Nav';
 import { useState } from 'react';
 import videoDetail from './data/video-details.json'
 import VideoList from './components/VideoList/VideoList';
-import Videos from './data/videos.json'
 import CurrentVideo from './components/CurrentVideo/CurrentVideo';
 import './App.scss'
 import VideoDesc from './components/VideoDesc/VideoDesc';
