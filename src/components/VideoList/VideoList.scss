@@ -1,0 +1,50 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/typograhpy';
+@import '../../styles/partials/variables';
+.next-videos{
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    &__title{
+        color: $primary-silver;
+        font-size: 0.85rem;
+        font-family: 'Avenir Next Demi';
+    }
+    &__card{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding-bottom: 0.5rem;
+    }
+    &__img{
+        width: 7rem;
+        height: 4.4rem;
+        border-radius: 0.5rem;
+    }
+    &__title1{
+        font-size: 0.78rem;
+        font-family: 'Avenir Next Demi';
+        color: $primary-black;
+        margin: 0;
+        line-height: 1rem;
+    }
+    &__channel{
+        font-size: 0.78rem;
+        margin: 0;
+    }
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+        max-width: 9.5rem;
+       
+    }
+    @include tablet{
+        &__img{
+            width: 7.5rem;
+            height: 4.3rem;
+        }
+        &__card{
+            margin-bottom: 0.7rem;
+        }
+    }
+}

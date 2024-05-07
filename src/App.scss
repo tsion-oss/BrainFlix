@@ -1,0 +1,13 @@
+@import './styles/partials/mixins';
+@import './styles/partials/typograhpy';
+@import './styles/partials/variables';
+
+*{
+    font-family: 'Avenir Next Regular';
+    box-sizing: border-box;
+}
+body{
+  
+    margin: 0;
+    padding: 0;
+}
