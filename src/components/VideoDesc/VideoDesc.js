@@ -1,5 +1,5 @@
-import viewsIcon from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Icons/views.svg'
-import likesIcon from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Icons/likes.svg'
+import viewsIcon from '/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/Icons/views.svg'
+import likesIcon from '/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/Icons/likes.svg'
 import './VideoDesc.scss'
 
 const VideoDesc = ({ mainVideo, formatDate}) => {

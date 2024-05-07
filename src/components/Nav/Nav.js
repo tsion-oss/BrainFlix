@@ -1,7 +1,7 @@
-import logoImage from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/logo/BrainFlix-logo.svg'
-import searchIcon from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Icons/search.svg'
-import avatar from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Images/Mohan-muruge.jpg'
-import buttonIcon from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Icons/upload.svg'
+import logoImage from '/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/logo/BrainFlix-logo.svg'
+import searchIcon from '/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/Icons/search.svg'
+import avatar from '/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/Images/Mohan-muruge.jpg'
+import buttonIcon from '/Users/zion/Documents/Brainstation/Dev/Tsion-Molla-Brainflix-sprint-1/src/assets/Icons/upload.svg'
 import './Nav.scss'
 
 const Nav = () => {
