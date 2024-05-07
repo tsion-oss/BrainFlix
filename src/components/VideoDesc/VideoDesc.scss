@@ -77,4 +77,23 @@
             font-size: 0.9rem;
         }
     }
+    @include desktop{
+        padding-right: 0rem;
+        &__views-div{
+            padding-right:1.5rem;
+        }
+        &__descr-div{
+            padding-right: 1.5rem;
+        }
+        &__description{
+            font-size: 0.85rem;
+        }
+        &__views,
+        &__likes{
+            display: flex;
+            align-items: center;
+        }
+       
+        
+    }
 }

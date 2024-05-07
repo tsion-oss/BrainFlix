@@ -138,4 +138,20 @@
             top: 1.2rem;
         }
     }
+    @include desktop{
+        padding-right: 0rem;
+        &__lists{
+            padding-right: 1.5rem;
+        }
+        &__input{
+            width: 32vw;
+        }
+        &__form--tab{
+            margin-right: 1.5rem;
+        }
+        &__description{
+            position: relative;
+            right: 5rem;
+        }
+    }
 }

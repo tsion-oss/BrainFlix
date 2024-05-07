@@ -14,8 +14,6 @@ const CurrentVideo = ({ mainVideo, setMainVideo, commentsList, formatDate  }) =>
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <VideoDesc formatDate={formatDate}  mainVideo={mainVideo}/>
-            <Comments formatDate={formatDate}  commentsList={commentsList} setMainVideo={setMainVideo} mainVideo={mainVideo}/>
         </div>        
     );  
 }

@@ -4,8 +4,12 @@ import './Comments.scss'
 import avatar from '/Users/zion/Documents/Brainstation/Dev/brainflix/src/assets/Images/Mohan-muruge.jpg'
 
 const Comments = ({ commentsList, formatDate }) => {
-    
    const [comments, setComments] = useState(commentsList)
+   useEffect(() => {
+    if(commentsList){
+        setComments(commentsList)
+    }
+   }, [commentsList, comments])
   
     const commentsLength = comments.length
    

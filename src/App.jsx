@@ -6,6 +6,8 @@ import VideoList from './components/VideoList/VideoList';
 import Videos from './data/videos.json'
 import CurrentVideo from './components/CurrentVideo/CurrentVideo';
 import './App.scss'
+import VideoDesc from './components/VideoDesc/VideoDesc';
+import Comments from './components/Comments/Comments';
 
 const App = () => {
     const [mainVideo, setMainVideo] = useState(videoDetail && videoDetail.length > 0 ? videoDetail[0] : null)
@@ -32,7 +34,15 @@ const App = () => {
         <Nav/>
         <div>
             <CurrentVideo formatDate={formatDate} commentsList={commentsList}  updateMainVideo={updateMainVideo} mainVideo={mainVideo} setMainVideo={setMainVideo} videoDetail={videoDetail} />
-            <VideoList updateMainVideo={updateMainVideo} setMainVideo={setMainVideo} mainVideo={mainVideo} videoDetail={videoDetail}/>
+            <div className='desktop'>
+                <div className='desktop__2'>
+                    <VideoDesc formatDate={formatDate}  mainVideo={mainVideo}/>
+                    <Comments formatDate={formatDate}  commentsList={commentsList} />
+                </div>
+                <div className='desktop__3'>
+                    <VideoList updateMainVideo={updateMainVideo} setMainVideo={setMainVideo} mainVideo={mainVideo} videoDetail={videoDetail}/>
+                </div>
+            </div>
         </div>
        </>
     )

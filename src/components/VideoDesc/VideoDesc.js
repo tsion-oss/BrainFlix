@@ -23,7 +23,9 @@ const VideoDesc = ({ mainVideo, formatDate}) => {
                    </div>
                </div>
            </div>
-           <p className='video-desc__description'>{mainVideo.description}</p>
+           <div className='video-desc__descr-div'>
+              <p className='video-desc__description video-desc--descr'>{mainVideo.description}</p>
+           </div>
 
         </div>
     );
