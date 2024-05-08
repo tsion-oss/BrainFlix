@@ -2,11 +2,10 @@ import React from 'react';
 import Nav from './components/Nav/Nav';
 import { useState } from 'react';
 import videoDetail from './data/video-details.json'
-import VideoList from './components/VideoList/VideoList';
-import CurrentVideo from './components/CurrentVideo/CurrentVideo';
 import './App.scss'
-import VideoDesc from './components/VideoDesc/VideoDesc';
-import Comments from './components/Comments/Comments';
+import MainVideo from './pages/MainVideo';
+import VideoUpload from './pages/VideoUpload';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
     const [mainVideo, setMainVideo] = useState(videoDetail && videoDetail.length > 0 ? videoDetail[0] : null)
@@ -31,18 +30,12 @@ const App = () => {
     return (
        <>
         <Nav/>
-        <div>
-            <CurrentVideo formatDate={formatDate} commentsList={commentsList}  updateMainVideo={updateMainVideo} mainVideo={mainVideo} setMainVideo={setMainVideo} videoDetail={videoDetail} />
-            <div className='desktop'>
-                <div className='desktop__2'>
-                    <VideoDesc formatDate={formatDate}  mainVideo={mainVideo}/>
-                    <Comments formatDate={formatDate}  commentsList={commentsList} />
-                </div>
-                <div className='desktop__3'>
-                    <VideoList updateMainVideo={updateMainVideo} setMainVideo={setMainVideo} mainVideo={mainVideo} videoDetail={videoDetail}/>
-                </div>
-            </div>
-        </div>
+        <Routes>
+           <Route path='/' element={<MainVideo formatDate={formatDate} commentsList={commentsList} updateMainVideo={updateMainVideo} mainVideo={mainVideo} setMainVideo={setMainVideo} videoDetail={videoDetail}>
+             <Route path=':id' element={<MainVideo />}/>
+           </MainVideo>}/>
+           <Route path='/video' element={<VideoUpload/>} /> 
+        </Routes>
        </>
     )
 }
