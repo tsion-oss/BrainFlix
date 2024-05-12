@@ -3,14 +3,17 @@ import commentIcon from "../../assets/Icons/add_comment.svg"
 import './Comments.scss'
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 
-const Comments = ({ commentsList, formatDate }) => {
-   const [comments, setComments] = useState(commentsList)
-   useEffect(() => {
-    if(commentsList){
-        setComments(commentsList)
-    }
-    }, [commentsList, comments])
-    const commentsLength = comments.length
+const Comments = ({  commentsList, setCommentsList, formatDate }) => {
+    // const [comments, setComments] = useState(commentsList);
+
+    useEffect(() => {
+        if (commentsList) {
+            setCommentsList(commentsList);
+        }
+    }, [commentsList]);
+
+    const commentsLength = commentsList ? commentsList.length : 0;
+
    
     return (
       <div className="comment">
@@ -29,7 +32,7 @@ const Comments = ({ commentsList, formatDate }) => {
             </form>
         </div>
         <div className="comment__list">
-         {comments.map((comment) => {
+         {commentsList && commentsList.map((comment) => {
             return(
                 <div key={comment.id} className="comment__lists">
                     <img className="comment__img-avatar"  />

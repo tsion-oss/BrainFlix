@@ -29,12 +29,12 @@
     }
     &__index{
         font-size: 0.9rem;
-        font-family: 'Avenir Next Demi';
+        font-weight: 600;
     }
     &__join{
         color: $primary-silver;
         font-size: 0.85rem;
-        font-family: 'Avenir Next Demi';
+        font-weight: 500;
     }
     &__input{
         width: 100%;
@@ -43,6 +43,7 @@
         border: 1.8px solid rgba(128, 128, 128, 0.248);
         border-radius: 0.3rem;
         resize: none;
+        background-color: rgba(128, 128, 128, 0.047);
         &::placeholder{
             font-size: 0.9rem;
         }
@@ -95,13 +96,14 @@
         font-size: 0.85rem;
     }
     &__name{
-        font-family: 'Avenir Next Demi';
+        font-weight: 600;
         color: $primary-black;
     }
     &__timestamp{
         color: $primary-silver;
     }
     &__text{
+        
         font-size: 0.85rem;
         line-height: 1.2rem;
         margin-top: 0rem;

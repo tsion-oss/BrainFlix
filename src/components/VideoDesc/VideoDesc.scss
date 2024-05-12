@@ -6,14 +6,14 @@
     padding: 0rem 1rem;
     &__h1{
         font-size: 1.5rem;
-        font-family: 'Avenir Next Bold';
+        font-weight: 700;
         color: $primary-black;
         border-bottom: 1px solid $secondary-mercury;
         padding-bottom: 1rem;
         line-height: 2.4rem;
     }
     &__channel{
-        font-family: 'Avenir Next demi';
+        font-weight: 600;
         font-size: 0.83rem;
         &-div{
         display: flex;
