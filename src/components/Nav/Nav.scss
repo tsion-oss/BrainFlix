@@ -71,6 +71,7 @@
         left: 0.5rem; 
         transform: translateY(-50%);
     }
+    
     @include tablet {
         &--tablet{
           display: block;

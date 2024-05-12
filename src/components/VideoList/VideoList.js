@@ -1,16 +1,24 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import './VideoList.scss'
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 
-const VideoList = ({ mainVideo, updateMainVideo, videoDetail }) => {
+const VideoList = ({ nextVideos, mainVideo, updateVideo }) => {
     const [filteredVideos, setFilteredVideos] = useState([])
-
     useEffect(() => {
-        if (mainVideo && videoDetail) {
-            const filtered = videoDetail.filter(video => video.id !== mainVideo.id);
-            setFilteredVideos(filtered);
+        try {
+            if (mainVideo && nextVideos) {
+                const filtered = nextVideos.filter(video => video.id !== mainVideo.id);
+                setFilteredVideos(filtered);
+            }
+        } catch (error) {
+            console.error('Error filtering videos:', error);
         }
-    }, [mainVideo, setFilteredVideos]);
+    }, [mainVideo, nextVideos]);
+
+
+   
 
     return (
         <div className="next-videos">
@@ -18,13 +26,14 @@ const VideoList = ({ mainVideo, updateMainVideo, videoDetail }) => {
             <div className="next-videos__div">
                 {filteredVideos.map((video) => {
                     return(
-                        <div className="next-videos__card" onClick={() => updateMainVideo(video)} key={video.id}>
+                        <Link to={`/${video.id}`} onClick={() => {updateVideo(video)}}  className="next-videos__card"  key={video.id}>
                             <img className="next-videos__img" src={video.image}/>
                             <div className="next-videos__desc">
                                 <p className="next-videos__title1">{video.title}</p>
                                 <p className="next-videos__channel">{video.channel}</p>
                             </div>
-                        </div>
+                        </Link>
+                        
                     )
                 })
                 }

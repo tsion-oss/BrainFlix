@@ -2,7 +2,7 @@ import viewsIcon from '../../assets/Icons/views.svg'
 import likesIcon from '../../assets/Icons/likes.svg'
 import './VideoDesc.scss'
 
-const VideoDesc = ({ mainVideo, formatDate}) => {
+const VideoDesc = ({ mainVideo, formatDate }) => {
     return (
         <div className="video-desc">
            <h1 className="video-desc__h1 video-desc__h1--tab">{mainVideo.title}</h1>
