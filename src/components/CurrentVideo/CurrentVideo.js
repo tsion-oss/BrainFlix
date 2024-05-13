@@ -1,7 +1,7 @@
 
 import './CurrentVideo.scss'
 
-const CurrentVideo = ({ mainVideo, setMainVideo }) => {
+const CurrentVideo = ({ mainVideo }) => {
 
 
     return (
