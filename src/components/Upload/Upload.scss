@@ -88,9 +88,10 @@
             display: none;
         }
         &__icons--tab{
-            width: 50%;
             display: flex;
-            justify-content: flex-end;
+            position: absolute;
+            right: 2.5rem;
+            width: 50%;
         }
         &__thumb-img{
             width: 50%;
@@ -123,6 +124,10 @@
         &__h1{
             font-size: 2.2rem;
             font-weight: 700;
+        }
+        &__icons--tab{
+            position: absolute;
+            right: 8.5rem;
         }
     }
 }
