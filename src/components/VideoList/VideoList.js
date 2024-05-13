@@ -26,13 +26,13 @@ const VideoList = ({ nextVideos, mainVideo, updateVideo }) => {
             <div className="next-videos__div">
                 {filteredVideos.map((video) => {
                     return(
-                        <Link to={`/${video.id}`} onClick={() => {updateVideo(video)}}  className="next-videos__card"  key={video.id}>
-                            <img className="next-videos__img" src={video.image}/>
+                        <div  className="next-videos__card"  key={video.id}>
+                            <Link to={`/${video.id}`} onClick={() => {updateVideo(video)}} ><img  className="next-videos__img" src={video.image}/></Link>
                             <div className="next-videos__desc">
                                 <p className="next-videos__title1">{video.title}</p>
                                 <p className="next-videos__channel">{video.channel}</p>
                             </div>
-                        </Link>
+                        </div>
                         
                     )
                 })

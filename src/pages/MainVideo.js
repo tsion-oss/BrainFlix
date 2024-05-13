@@ -14,9 +14,7 @@ const MainVideo = () => {
     const [mainVideo, setMainVideo] = useState({})
     const [nextVideos, setNextVideos] = useState([])
     const [commentsList, setCommentsList] = useState([])
-    // const [ids, setIds] = useState()
-    const { id } = useParams()
-    
+   
     useEffect(() => {
         const getData = async () => {
             try{
