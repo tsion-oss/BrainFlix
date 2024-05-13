@@ -4,8 +4,6 @@ import './Comments.scss'
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 
 const Comments = ({  commentsList, setCommentsList, formatDate }) => {
-    // const [comments, setComments] = useState(commentsList);
-
     useEffect(() => {
         if (commentsList) {
             setCommentsList(commentsList);
@@ -14,7 +12,6 @@ const Comments = ({  commentsList, setCommentsList, formatDate }) => {
 
     const commentsLength = commentsList ? commentsList.length : 0;
 
-   
     return (
       <div className="comment">
         <p className="comment__index">{commentsLength} Comments</p>
