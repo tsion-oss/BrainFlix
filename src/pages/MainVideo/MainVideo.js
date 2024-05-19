@@ -1,7 +1,7 @@
 import CurrentVideo from "../../components/CurrentVideo/CurrentVideo";
 import VideoDesc from "../../components/VideoDesc/VideoDesc";
 import Comments from "../../components/Comments/Comments";
-import VideoList from "../../components/VideoList/VideoList";
+import VideoList from "../../components/VideoList/VideoList.js";
 import axios, { all } from 'axios'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -27,7 +27,7 @@ const MainVideo = () => {
         }
         
         getData()
-    }, [mainVideo])
+    }, [])
  
     function formatDate(timestamp){
         const date = new Date(timestamp)
