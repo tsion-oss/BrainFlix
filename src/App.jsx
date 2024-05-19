@@ -1,8 +1,8 @@
 
 import Nav from './components/Nav/Nav';
 import './App.scss'
-import MainVideo from './pages/MainVideo';
-import VideoUpload from './pages/VideoUpload';
+import MainVideo from './pages/MainVideo/MainVideo';
+import VideoUpload from './pages/VideoUpload/VideoUpload';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
