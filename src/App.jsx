@@ -13,7 +13,7 @@ const App = () => {
         <Routes>
            <Route path='/' element={<MainVideo/>}/>
            <Route path='/:id' element={<MainVideo />}/>
-           <Route path='/video' element={<VideoUpload/>} /> 
+           <Route path='/video' element={<VideoUpload/>}/> 
         </Routes>
        </>
     )

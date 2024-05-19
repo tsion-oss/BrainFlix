@@ -7,9 +7,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const MainVideo = () => {
-
-    const apiKey = '9f512652-f06f-4595-8c84-02c3e5aba23e'
-    const baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com'
+    const baseUrl = 'http://localhost:3000'
 
     const [mainVideo, setMainVideo] = useState({})
     const [nextVideos, setNextVideos] = useState([])
@@ -18,9 +16,9 @@ const MainVideo = () => {
     useEffect(() => {
         const getData = async () => {
             try{
-                const response = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`)
+                const response = await axios.get(`${baseUrl}/videos`)
                 setNextVideos(response.data)
-                const { data } = await axios.get(`${baseUrl}/videos/${response.data[0].id}?api_key=${apiKey}`)
+                const { data } = await axios.get(`${baseUrl}/videos/${response.data[0].id}`)
                 setMainVideo(data)
                 setCommentsList(data.comments)
             } catch (error) {
@@ -41,7 +39,7 @@ const MainVideo = () => {
 
     const updateVideo = async (video) => {
         if (video){
-            const { data } = await axios.get(`${baseUrl}/videos/${video.id}?api_key=${apiKey}`)
+            const { data } = await axios.get(`${baseUrl}/videos/${video.id}?`)
             setMainVideo(data)
             setCommentsList(data.comments)
         }
