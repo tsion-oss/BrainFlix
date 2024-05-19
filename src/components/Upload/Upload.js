@@ -3,8 +3,9 @@ import videoThumbnail from '../../assets/Images/Upload-video-preview.jpg'
 import './Upload.scss'
 import publishIcon from '../../assets/Icons/publish.svg'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import thumbnail from '../../assets/Images/Upload-video-preview.jpg'
 
 const Upload = () => {
 
@@ -12,14 +13,35 @@ const Upload = () => {
     const [description, setDescription] = useState('')
     const navigate = useNavigate();
     
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
-        setTimeout(() => {
-            alert('Video uploaded')
-            navigate('/')
-        }, 1000)
-        setTitle('');
-        setDescription('');
+
+        const videoData = {
+            title: title,
+            description: description,
+            image: thumbnail
+        };
+
+        try {
+            const response = await axios.post('http://localhost:3000/videos', videoData)
+
+            if (response.status === 201) {
+                setTitle('')
+                setDescription('')
+                navigate('/')
+                setTimeout(() => {
+                    alert('Video uploaded')
+                    navigate('/')
+                }, 1000)
+            } else {
+                throw new Error('Failed to upload video')
+            }
+        } catch (error) {
+            console.error('Error uploading video:', error.message)
+           
+        }
+
+      
     }
 
     return (
