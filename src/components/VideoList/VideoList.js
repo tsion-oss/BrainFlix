@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import './VideoList.scss'
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
+
 
 const VideoList = ({ nextVideos, mainVideo, updateVideo }) => {
     const [filteredVideos, setFilteredVideos] = useState([])

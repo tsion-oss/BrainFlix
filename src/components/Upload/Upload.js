@@ -44,6 +44,10 @@ const Upload = () => {
       
     }
 
+    const cancelSubmit = () => {
+        navigate('/')
+    }
+
     return (
         <form className='upload' onSubmit={handleSubmit}>
             <h1 className='upload__h1'>Upload Video</h1>
@@ -66,10 +70,10 @@ const Upload = () => {
                    <img className='upload__publish-img' src={publishIcon} alt='publish button icon'/> 
                    <button type='submit' className='upload__publish'>PUBLISH</button>
                 </div>
-                <button className='upload__cancel'>CANCEL</button>
+                <button onClick={() => {cancelSubmit()}} className='upload__cancel'>CANCEL</button>
             </div>
             <div className='upload__icons upload__icons--tab'>
-                <button className='upload__cancel'>CANCEL</button>
+                <button onClick={() => {cancelSubmit()}}  className='upload__cancel'>CANCEL</button>
                 <div className='upload__publish-div'>
                    <img className='upload__publish-img' src={publishIcon} alt='publish button icon'/> 
                    <button className='upload__publish'>PUBLISH</button>
